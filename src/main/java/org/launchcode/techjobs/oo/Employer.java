@@ -5,16 +5,16 @@ import java.util.Objects;
 public class Employer {
 
     private int id;
-    private static int nextId = 1;
+    private static int nextId = 1;//does not store  any value within employer
     private String value;
 
-    public Employer() {
+    public Employer() {//assigns value of nextId to id.so each new Employer with get a different id number
         id = nextId;
         nextId++;
     }
 
-    public Employer(String value) {
-        this();
+    public Employer(String value) {//assigns aValue to value field and initializes id  for the object calling th first constructor with  this();
+        this();// calling this(); in constructor  makes initalizing  id a default bevhavior
         this.value = value;
     }
 
