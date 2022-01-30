@@ -112,8 +112,8 @@ public class Job {
 
 
 
-         String   printForm = ("\n" + "ID: " + "_"+id +"_"+ "\n" + "Name: " +  "_"+name +"_"+ "\n" + "Employer: " + "_"+employer +"_"+ "\n" + "Location: " + "_"+location +"_"+ "\n" + "Position Type: " + "_"+positionType+ "_"+ "\n" + "Core Competency: " + "" +
-                 "_"+coreCompetency + "_");
+         String   printForm = ("\n" + "ID: " + ""+id +""+ "\n" + "Name: " +  ""+name +""+ "\n" + "Employer: " + ""+employer +""+ "\n" + "Location: " + ""+location +""+ "\n" + "Position Type: " + ""+positionType+ ""+ "\n" + "Core Competency: " + "" +
+                 ""+coreCompetency + "");
 
         return printForm;
     }
