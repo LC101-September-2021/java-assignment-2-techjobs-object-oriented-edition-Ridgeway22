@@ -37,12 +37,12 @@ public class Job {
         if (this == o) return true;
         if (!(o instanceof Job)) return false;
         Job job = (Job) o;
-        return getId() == job.getId() && getName().equals(job.getName()) && getEmployer().equals(job.getEmployer()) && getLocation().equals(job.getLocation()) && getPositionType().equals(job.getPositionType()) && getCoreCompetency().equals(job.getCoreCompetency());
+        return getId() == job.getId();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getEmployer(), getLocation(), getPositionType(), getCoreCompetency());
+        return Objects.hash(getId());
     }
 
 
