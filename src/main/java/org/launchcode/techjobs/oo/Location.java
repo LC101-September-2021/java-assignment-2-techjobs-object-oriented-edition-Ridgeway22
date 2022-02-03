@@ -1,31 +1,34 @@
 package org.launchcode.techjobs.oo;
 
+import org.launchcode.techjobs.oo.test.jobField;
+
 import java.util.Objects;
 
-public class Location {
+public class Location extends jobField {
 
-    private int id;
-    private static int nextId = 1;
-    private String value;
-
-    public Location() {// initializing the id field
-        id = nextId;
-        nextId++;
-    }
+//    private int id;
+//    private static int nextId = 1;
+//    private String value;
+//
+//    public Location() {// initializing the id field
+//        id = nextId;
+//        nextId++;
+//    }
 
     // TODO: Add a constructor that takes a string as a parameter and assigns it to the 'value' field. The
     //  constructor should also call the empty constructor in order to initialize the 'id' field.
     public Location(String value) {
-        this();// calling this(); in constructor  makes initializing  id a default bevhavior
-        this.value = value; //initialize value field for new Location object
+//        this();// calling this(); in constructor  makes initializing  id a default bevhavior
+//        this.value = value; //initialize value field for new Location object
+        super(value);
     }
 
     // Custom toString, equals, and hashCode methods:
 
-    @Override
-    public String toString() {
-        return value;
-    }
+//    @Override
+//    public String toString() {
+//        return value;
+//    }
 
     @Override
     public boolean equals(Object o) {
@@ -42,16 +45,16 @@ public class Location {
 
     // Getters and Setters:
 
-    public int getId() {
-        return id;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
-    }
+//    public int getId() {
+//        return id;
+//    }
+//
+//    public String getValue() {
+//        return value;
+//    }
+//
+//    public void setValue(String value) {
+//        this.value = value;
+//    }
 
 }

@@ -52,7 +52,7 @@ public class JobTest {
     @Test
     public void testToStringHandlesEmptyField(){
         Job jobss = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
-        //String jobString = job.getId(jobss);
+
         //assertEquals(jobString, jobss.toString());
     }
 
