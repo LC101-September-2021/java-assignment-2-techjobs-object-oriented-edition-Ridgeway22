@@ -1,5 +1,6 @@
 package org.launchcode.techjobs.oo.test;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -70,17 +71,28 @@ import static org.junit.Assert.assertEquals;
         public void testToStringStartsAndEndsWithNewLine() {
             char firstChar = job1Test.toString().charAt(0);
             char lastChar = job1Test.toString().charAt(job1Test.toString().length() - 1);
-            assertEquals(firstChar, '\n');
-            assertEquals(lastChar, '\n');
+            assertEquals( firstChar,'\n' );
+            assertEquals( lastChar,'\n');
         }
         @Test
 
         public void testToStringHandlesEmptyField(){
             Job job10Test = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
 
-            assertEquals("", job10Test.toString());
+            assertEquals("",job10Test.getName().toString() );
         }
+        @Test
+        public void testToStringContainsCorrectLabelsAndData() {
+        //String one = job.toString(job1Test);
 
+            //assertTrue("ID:1",job1Test.toString());
+        assertTrue(("\nID: 1\n" +
+               "Name: Product tester\n" +
+               "Employer: ACME\n" +
+               "Location: Desert\n" +
+                "Position Type: Quality control\n" +
+               "Core Competency: Persistence\n").equals( job1Test.toString() ));
+        }
 
     }
 
