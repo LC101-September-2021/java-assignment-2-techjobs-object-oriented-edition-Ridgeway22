@@ -74,10 +74,11 @@ import static org.junit.Assert.assertEquals;
             assertEquals(lastChar, '\n');
         }
         @Test
-        public void testToStringHandlesEmptyField(){
-            Job jobss = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
 
-            //assertEquals(jobString, jobss.toString());
+        public void testToStringHandlesEmptyField(){
+            Job job10Test = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
+
+            assertEquals("", job10Test.toString());
         }
 
 
