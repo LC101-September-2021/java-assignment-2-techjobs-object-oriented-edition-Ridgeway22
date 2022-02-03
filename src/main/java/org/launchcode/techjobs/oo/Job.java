@@ -94,6 +94,11 @@ public class Job {
     }
 
     public  String toString() {
+        String printForm;
+
+        if(name.equals("")&& employer.getValue().equals("")&& location.getValue().equals("")&& positionType.getValue().equals("")&& coreCompetency.getValue().equals("")){
+            printForm = "OOPS! This job does not seem to exist";
+        } else {
         if(name.equals("")) {
         setName(  "Data not available");
         }
@@ -110,11 +115,9 @@ public class Job {
             coreCompetency.setValue("Data not available");
         }
 
-
-
-         String   printForm = ("\n" + "ID: " + ""+id +""+ "\n" + "Name: " +  ""+name +""+ "\n" + "Employer: " + ""+employer +""+ "\n" + "Location: " + ""+location +""+ "\n" + "Position Type: " + ""+positionType+ ""+ "\n" + "Core Competency: " + "" +
-                 ""+coreCompetency + "\n");
-
+            printForm = ("\n" + "ID: " + "" + id + "" + "\n" + "Name: " + "" + name + "" + "\n" + "Employer: " + "" + employer + "" + "\n" + "Location: " + "" + location + "" + "\n" + "Position Type: " + "" + positionType + "" + "\n" + "Core Competency: " + "" +
+                    "" + coreCompetency + "\n");
+        }
         return printForm;
     }
 
