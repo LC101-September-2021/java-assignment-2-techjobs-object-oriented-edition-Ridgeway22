@@ -69,8 +69,9 @@ import static org.junit.Assert.assertEquals;
 
         @Test
         public void testToStringStartsAndEndsWithNewLine() {
-            char firstChar = job1Test.toString().charAt(0);
-            char lastChar = job1Test.toString().charAt(job1Test.toString().length() - 1);
+            Job job15Test = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            char firstChar = job15Test.toString().charAt(0);
+            char lastChar = job15Test.toString().charAt(job15Test.toString().length() - 1);
             assertEquals( firstChar,'\n' );
             assertEquals( lastChar,'\n');
         }
