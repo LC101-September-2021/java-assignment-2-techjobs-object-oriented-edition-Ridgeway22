@@ -79,11 +79,20 @@ import static org.junit.Assert.assertEquals;
         public void testToStringHandlesEmptyField(){
             Job job12Test = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
 
-            assertEquals("",job12Test.getName() );assertEquals("",job12Test.getCoreCompetency().toString() );
-            assertEquals("",job12Test.getEmployer().toString() );
-            assertEquals("",job12Test.getLocation().toString() );
-            assertEquals("",job12Test.getPositionType().toString() );
+//            assertEquals("",job12Test.getName() );assertEquals("",job12Test.getCoreCompetency().toString() );
+//            assertEquals("",job12Test.getEmployer().toString() );
+//            assertEquals("",job12Test.getLocation().toString() );
+//            assertEquals("",job12Test.getPositionType().toString() );
 
+
+            //Job job10Test = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            String tester2 = ("\nID: 4\n" +
+                    "Name: Data not available\n" +
+                    "Employer: Data not available\n" +
+                    "Location:  \n" +
+                    "Position Type: Data not available\n" +
+                    "Core Competency: Data not available\n");
+            Assert.assertEquals(tester2, job12Test.toString());
         }
         @Test
         public void testToStringContainsCorrectLabelsAndData() {
