@@ -77,21 +77,27 @@ import static org.junit.Assert.assertEquals;
         @Test
 
         public void testToStringHandlesEmptyField(){
-            Job job10Test = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
+            Job job12Test = new Job("",new Employer (""),new Location( " "),new PositionType( ""), new CoreCompetency(""));
 
-            assertEquals("",job10Test.getName().toString() );
+            assertEquals("",job12Test.getName() );assertEquals("",job12Test.getCoreCompetency().toString() );
+            assertEquals("",job12Test.getEmployer().toString() );
+            assertEquals("",job12Test.getLocation().toString() );
+            assertEquals("",job12Test.getPositionType().toString() );
+
         }
         @Test
         public void testToStringContainsCorrectLabelsAndData() {
+//            assertEquals(("\n" + "ID: " + "" + job1Test.getId() + "" + "\n" + "Name: " + "" + job1Test.getName() + "" + "\n" + "Employer: " + "" + job1Test.getEmployer()+ "" + "\n" + "Location: " + "" + job1Test.getLocation()+ "" + "\n" + "Position Type: " + "" +job1Test.getPositionType() + "" + "\n" + "Core Competency: " + "" +
+//                    "" + job1Test.getCoreCompetency() + "\n"), job1Test.toString());
         //String one = job.toString(job1Test);
-
-            //assertTrue("ID:1",job1Test.toString());
-        assertTrue(("\nID: 1\n" +
+            Job job10Test = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+            String tester2 = ("\nID: 4\n" +
                "Name: Product tester\n" +
                "Employer: ACME\n" +
                "Location: Desert\n" +
                 "Position Type: Quality control\n" +
-               "Core Competency: Persistence\n").equals( job1Test.toString() ));
+               "Core Competency: Persistence\n");
+            Assert.assertEquals(tester2, job10Test.toString());
         }
 
     }
