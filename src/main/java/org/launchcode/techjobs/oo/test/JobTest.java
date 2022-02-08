@@ -110,7 +110,7 @@ import static org.junit.Assert.assertEquals;
 //                    "" + job1Test.getCoreCompetency() + "\n"), job1Test.toString());
         //String one = job.toString(job1Test);
             Job job10Test = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
-            String tester2 = ("\nID: 13\n" +
+            String tester2 = ("\nID: "+job10Test.getId()+ "\n" +
                "Name: Product tester\n" +
                "Employer: ACME\n" +
                "Location: Desert\n" +
